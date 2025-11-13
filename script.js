@@ -9,18 +9,18 @@ const OPTextList = [
 
 buttonElement.addEventListener('click', () => {
     const inputValue = inputElement.value;
-        outputElement.textContent = inputValue;
+//        outputElement.textContent = inputValue;
 //ここまでがふつうにひょうじさせるとこ
 
 //ここから条件分岐
-    const keywordbox = { keyword: inputElement.value }
+    const keywordbox = { keyword: inputValue }
 
 const keywordIndex = keywordbox => {
   const OPText = OPTextList.find(p => p.keyword === keywordbox.keyword).optext;
 
-       outputElement.textContent = OPText;
+  outputElement.textContent = OPText;
 }; 
 
     
-    outputElement.textContent = pokemonNumber;
+//    outputElement.textContent = pokemonNumber;
 });
