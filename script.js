@@ -1,3 +1,4 @@
+           
 const inputElement = document.getElementById('myInput');
 const outputElement = document.getElementById('output');
 const buttonElement = document.getElementById('myButton');
@@ -8,19 +9,18 @@ const OPTextList = [
 ];
 
 buttonElement.addEventListener('click', () => {
-    const inputValue = inputElement.value;
-//        outputElement.textContent = inputValue;
-//ここまでがふつうにひょうじさせるとこ
-
-//ここから条件分岐
-    const keywordbox = { keyword: inputValue }
-
-const keywordIndex = keywordbox => {
-  const OPText = OPTextList.find(p => p.keyword === keywordbox.keyword).optext;
-
-  outputElement.textContent = OPText;
-}; 
+  const inputValue = inputElement.value;
+  //        outputElement.textContent = inputValue;
+  //ここまでがふつうにひょうじさせるとこ
+  
+  //ここから条件分岐
+  const keywordbox = { keyword: inputValue }
+  
+  const keywordIndex = keywordbox => {
+    const OPText = OPTextList.find(p => p.keyword === keywordbox.keyword).optext;
+    
+    outputElement.textContent = OPText + "これかわってる？";
+  }; 
 
     
-//    outputElement.textContent = pokemonNumber;
 });
